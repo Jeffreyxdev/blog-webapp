@@ -1,16 +1,21 @@
 
 import { Link } from 'react-router-dom'
 
-const Navbar = () => {
+const Navbar = ({GoogleSignout, isAuth}) => {
   return (
     <nav className='nav'>
-        <Link to='/'>Blog</Link>
-        <Link to='/login'>Login</Link>
-        <Link to='#'>Create Post</Link>
-        <button className='login-btn'>Sign Out</button>
+        <Link to='/'>Blogs</Link>
 
+        {
+          !isAuth ? (<Link to='/login'>Login</Link>) :(
+            <>
+            <Link to='/create-post'>Create Post</Link>
+           <button className='login-btn' onClick={GoogleSignout}>Sign Out</button>
+        </>)
+        }
+      
     </nav>
   )
-}
+};
 
 export default Navbar
