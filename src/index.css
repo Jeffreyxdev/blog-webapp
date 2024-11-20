@@ -193,14 +193,15 @@ textarea {
 }
 
 .homePage .post {
-  width: 65vw;
+  width: 70vw;
   height: auto;
   max-height: 600px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin: 20px;
   padding: 20px;
-  background: rgba(59, 50, 91, 0.66);
+  background: rgba(24, 24, 24, 0.66);
   color: #fff;
+  border-radius: 20px;
 }
 
 .post .postHeader {
@@ -208,10 +209,12 @@ textarea {
   justify-content: center;
   width: 100%;
   flex-wrap: wrap;
+  
 }
 
 .postHeader .title {
-  flex: 50%;
+  flex: 100%;
+  
 }
 
 .postHeader .deletePost {
